@@ -1,0 +1,47 @@
+<div class="full-container">
+  <form class="form">
+    <p class="title">Registrazione</p>
+    <p class="message">Controllare di aver compilato tutti i campi richiesti!</p>
+
+    <label>
+      <input
+        [(ngModel)]="employeename"
+        [ngModelOptions]="{ standalone: true }"
+        id="name"
+        required=""
+        placeholder=""
+        type="text"
+        class="input"
+      />
+      <span>Nome e Cognome</span>
+    </label>
+
+    <label>
+      <input
+        [(ngModel)]="email"
+        [ngModelOptions]="{ standalone: true }"
+        id="email"
+        required=""
+        placeholder=""
+        type="email"
+        class="input"
+      />
+      <span>Email</span>
+    </label>
+
+    <label>
+      <input
+        [(ngModel)]="password"
+        [ngModelOptions]="{ standalone: true }"
+        id="password"
+        required=""
+        placeholder=""
+        type="password"
+        class="input"
+      />
+      <span>Password</span>
+    </label>
+    <button type="submit" class="submit" (click)="save()">Conferma</button>
+    <p class="signin">Già registrato ? <a routerLink="/login">Login</a></p>
+  </form>
+</div>
