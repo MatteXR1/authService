@@ -22,9 +22,13 @@ export class LoginComponent {
     this.http
       .post('http://localhost:8081/api/employee/login', bodyData)
       .subscribe((resultData: any) => {
+        console.log(this.email);
+        console.log(this.password);
+
         if (resultData.message == 'Email not exits') {
           alert('Email not exits');
         } else if (resultData.message == 'Login Success') {
+          console.log(resultData);
           this.router.navigateByUrl('/home');
         } else {
           alert('Incorrect Email and Password not match');
