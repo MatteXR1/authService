@@ -21,7 +21,7 @@ export class RegisterComponent {
     };
 
     this.http
-      .post('http://localhost:8080/api/employee/register', bodyData, {
+      .post('http://localhost:8081/api/employee/register', bodyData, {
         responseType: 'text',
       })
       .subscribe((resultData: any) => {

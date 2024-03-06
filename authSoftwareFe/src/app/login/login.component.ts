@@ -20,7 +20,7 @@ export class LoginComponent {
     };
 
     this.http
-      .post('http://localhost:8080/api/employee/login', bodyData)
+      .post('http://localhost:8081/api/employee/login', bodyData)
       .subscribe((resultData: any) => {
         if (resultData.message == 'Email not exits') {
           alert('Email not exits');
